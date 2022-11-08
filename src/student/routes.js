@@ -6,10 +6,15 @@ const pool = require("../../db");
 
 //const poola = require("../../db.js");
 
-router.get('/',controller.getStudents)
-router.get('/studentsup30',controller.getStudentsUp30)
-router.get('/studentsup50',controller.getStudentsUp50)
-router.get('/:id',controller.getStudentsByid)
+router.get("/",controller.getStudents);
+router.post("/",controller.addStudent);
+router.get("/studentsup30",controller.getStudentsUp30);
+router.get("/studentsup50",controller.getStudentsUp50);
+router.get("/:id",controller.getStudentsByid);
+router.delete("/:id",controller.removeStudent);
+
+
+
 //`${}`
 
 // router.get('/',(req,res)=>{
