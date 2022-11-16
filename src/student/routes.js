@@ -6,12 +6,13 @@ const pool = require("../../db");
 
 //const poola = require("../../db.js");
 
-router.get("/",controller.getStudents);
-router.post("/",controller.addStudent);
-router.get("/studentsup30",controller.getStudentsUp30);
-router.get("/studentsup50",controller.getStudentsUp50);
-router.get("/:id",controller.getStudentsByid);
-router.delete("/:id",controller.removeStudent);
+router.get("/",controller.getAthletes);
+router.post("/",controller.addAthlete);
+router.get("/athletesup30",controller.getAthletesUp30);
+router.get("/athletesup50",controller.getAthletesUp50);
+router.get("/:id",controller.getAthletesByid);
+router.put("/:id",controller.updateAthletes)
+router.delete("/:id",controller.removeAthlete);
 
 
 
@@ -23,8 +24,8 @@ router.delete("/:id",controller.removeStudent);
 // ssssss
 
 
-// router.get('/studentsup50',(req,res) => {    
-//     pool.query("SELECT * FROM students",(error,results)=>{
+// router.get('/Athletesup50',(req,res) => {    
+//     pool.query("SELECT * FROM Athletes",(error,results)=>{
 //         if (error) throw error;
 //         res.status(200).json(results.rows)
 //     });
