@@ -2,7 +2,7 @@
 const express = require('express');
 const studentRoutes = require('./src/student/routes');
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 8080;
 const cors = require('cors');
 
 app.use(express.json())
@@ -18,3 +18,7 @@ app.use('/api/v1/gymathletes',studentRoutes)
 app.listen(PORT, () => {
     console.log('app is launching under port : ' + PORT)
 })
+
+
+
+ 
